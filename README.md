@@ -1,6 +1,6 @@
 # REACT Task Tracker
 
-This task tracker is made under the guidance of this crash course video: https://www.youtube.com/watch?v=w7ejDZ8SWv8. Live demo exists here: react-task-tracker.pearupung.ee.
+This task tracker is made under the guidance of this crash course video: https://www.youtube.com/watch?v=w7ejDZ8SWv8. Live demo exists here: http://react-task-tracker.pearupung.ee.
 
 ## How to contribute
 
