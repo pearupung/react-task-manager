@@ -5,7 +5,7 @@ function App() {
   const x = false
   return (
     <div className='container'>
-      <Header title="Hello"></Header>
+      <Header></Header>
     </div>
   );
 }
