@@ -1,9 +1,10 @@
 
 function App() {
+  const name = 'Brian'
   return (
-    <>
-      <h1>Hello from React!</h1>
-    </>
+    <div className='container'>
+      <h1>Hello, {name}!</h1>
+    </div>
   );
 }
 
