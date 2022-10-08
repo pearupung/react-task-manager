@@ -1,9 +1,10 @@
 
 function App() {
   const name = 'Brian'
+  const x = false
   return (
     <div className='container'>
-      <h1>Hello, {1 + 1}!</h1>
+      <h1>Hello, {x ? 'Barney' : 'Williams'}!</h1>
     </div>
   );
 }
