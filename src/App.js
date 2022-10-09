@@ -3,6 +3,10 @@ import Tasks from './components/Tasks'
 import { useState } from 'react'
 
 
+function deleteTask(id) {
+  console.log(id)
+}
+
 function App() {
   const [tasks, setTasks] = useState([
     {
@@ -29,7 +33,7 @@ function App() {
   return (
     <div className='container'>
       <Header ></Header>
-      <Tasks tasks={tasks}></Tasks>
+      <Tasks tasks={tasks} onDelete={deleteTask}></Tasks>
     </div>
   );
 }
