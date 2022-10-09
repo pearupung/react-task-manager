@@ -2,11 +2,6 @@ import Header from "./components/Header"
 import Tasks from './components/Tasks'
 import { useState } from 'react'
 
-
-function deleteTask(id) {
-  console.log(id)
-}
-
 function App() {
   const [tasks, setTasks] = useState([
     {
@@ -30,10 +25,18 @@ function App() {
 ])
 
 
+  const deleteTask = (id) => {
+    console.log(id)
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
+
+
   return (
     <div className='container'>
       <Header ></Header>
-      <Tasks tasks={tasks} onDelete={deleteTask}></Tasks>
+      {tasks.length == 0 ? 
+        'No tasks to show.' :
+        <Tasks tasks={tasks} onDelete={deleteTask}></Tasks>}
     </div>
   );
 }
