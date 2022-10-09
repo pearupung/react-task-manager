@@ -25,6 +25,8 @@ function App() {
     },
   ])
 
+  const [showAddTask, setShowAddTask] = useState(false)
+
   const addTask = (task) => {
     console.log(task)
     const id = Math.floor(Math.random() * 10000) + 1
@@ -46,8 +48,11 @@ function App() {
 
   return (
     <div className='container'>
-      <Header ></Header>
-      <AddTask onAdd={addTask}></AddTask>
+      <Header 
+        toggleAdd={setShowAddTask}
+        showAdd={showAddTask}
+        ></Header>
+      {showAddTask && <AddTask onAdd={addTask}></AddTask>}
       {tasks.length === 0 ? 
         'No tasks to show.' :
         <Tasks 
