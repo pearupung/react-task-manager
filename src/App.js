@@ -23,8 +23,11 @@ function App() {
         day: '2022-10-03',
         reminder: false,
     },
-])
+  ])
 
+  const addTask = (task) => {
+    console.log(task)
+  }
 
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
@@ -41,7 +44,7 @@ function App() {
   return (
     <div className='container'>
       <Header ></Header>
-      <AddTask></AddTask>
+      <AddTask onAdd={addTask}></AddTask>
       {tasks.length === 0 ? 
         'No tasks to show.' :
         <Tasks 
