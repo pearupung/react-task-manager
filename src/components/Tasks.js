@@ -1,4 +1,8 @@
-const tasks = [
+import { useState } from 'react'
+
+
+const Tasks = () => {
+  const [tasks, setTasks] = useState([
     {
         id: 1,
         text: "Bring the knight a shruberry",
@@ -17,10 +21,8 @@ const tasks = [
         day: '2022-10-03',
         reminder: '2022-10-01',
     },
-]
+])
 
-
-const Tasks = () => {
   return (
     tasks.map(task => (<h3 key={task.id}>
         {task.text}
